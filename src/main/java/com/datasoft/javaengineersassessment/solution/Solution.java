@@ -193,7 +193,6 @@ public class Solution implements Runnable{
 		        					}
 		        				}
 		        				
-		        				int size = tests.get(i).size();
 		        				ArrayList<Object> innerTable = tests.get(i).get(innerTableIndex);
 				        		ArrayList<Object> innerTableColumnList = (ArrayList<Object>) innerTable.get(2);
 
