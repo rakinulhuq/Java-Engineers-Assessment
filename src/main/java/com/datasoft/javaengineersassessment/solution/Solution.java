@@ -389,7 +389,6 @@ public class Solution implements Runnable{
 	}
 	
 	public int[] readnTnD() throws NumberFormatException {
-		
 		String input = IO.readLine();
 		String [] inputArray = input.split("\\s+");
 		int [] values = new int[2];
