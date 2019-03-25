@@ -113,7 +113,6 @@ public class Solution implements Runnable{
 		        						prevColumn = column;
 		        						columnExists = false;
 		        					}
-		        					
 		        				}
 		        				
 		        				int innerTableIndex = 0;
@@ -362,29 +361,28 @@ public class Solution implements Runnable{
 	}
 	
 	public String [][] readTableNamesAndOrders(int nT) throws IOException {
-		
 		String [][] tableNamesAndOrder = new String[nT][2];
 		try {
-		      String input = IO.readLine();
-		      String [] inputArray = input.split("\\s+");
+			String input = IO.readLine();
+			String [] inputArray = input.split("\\s+");
 		          
-              if (inputArray.length != nT) {
-              	throw new IOException("Expected "+ nT + " table names but got "+ tableNamesAndOrder.length);
-              }
+            if (inputArray.length != nT) {
+            	throw new IOException("Expected "+ nT + " table names but got "+ tableNamesAndOrder.length);
+            }
               
-              String [] nameOrderSplit = new String[2];
-              for (int i = 0; i < inputArray.length; i++) {
-              	if (inputArray[i].contains("desc")) {
-              		nameOrderSplit = inputArray[i].split("\\(");
-              		tableNamesAndOrder[i][0] = nameOrderSplit[0];
-              		tableNamesAndOrder[i][1] = "desc";
+            String [] nameOrderSplit = new String[2];
+            for (int i = 0; i < inputArray.length; i++) {
+            	if (inputArray[i].contains("desc")) {
+            		nameOrderSplit = inputArray[i].split("\\(");
+            		tableNamesAndOrder[i][0] = nameOrderSplit[0];
+            		tableNamesAndOrder[i][1] = "desc";
               	} else {
               		nameOrderSplit = inputArray[i].split("\\(");
               		tableNamesAndOrder[i][0] = nameOrderSplit[0];
               		tableNamesAndOrder[i][1] = "asc";
               	}
               }
-      		return tableNamesAndOrder;
+            return tableNamesAndOrder;
 		} catch (IOException e) {
 			throw new IOException();
 		}
@@ -393,17 +391,17 @@ public class Solution implements Runnable{
 	public int[] readnTnD() throws NumberFormatException {
 		
 		String input = IO.readLine();
-        String [] inputArray = input.split("\\s+");
-        int [] values = new int[2];
-        try {
-        	values[0] = Integer.parseInt(inputArray[0]);
-        	values[1] = Integer.parseInt(inputArray[1]);
-        	return values;
-        } catch (NumberFormatException e) {
-        	throw new NumberFormatException();
-        }
+		String [] inputArray = input.split("\\s+");
+		int [] values = new int[2];
+		try {
+			values[0] = Integer.parseInt(inputArray[0]);
+			values[1] = Integer.parseInt(inputArray[1]);
+			return values;
+	    } catch (NumberFormatException e) {
+	    	throw new NumberFormatException();
+	    }
 	}
-
+	
 	public int readn() throws NumberFormatException{
 		try {
 	      	return Integer.parseInt(IO.readLine());
